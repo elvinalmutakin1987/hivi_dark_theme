@@ -3,12 +3,14 @@
         <div class="row">
             <div class="col-12 pages-title">
                 <div class="content">
-                    <h1 data-wow-delay="0s" class="wow fadeInUp">Empower Your Game <br>
-                        Book Courts & Relive Every Moment</h1>
+                    <h1 data-wow-delay="0s" class="wow fadeInUp">
+                        Pesan Lapangan <br> & Putar Ulang Setiap Momen
+                    </h1>
                     <p data-wow-delay="0.1s" class="wow fadeInUp">
                         Pesan lapangan dengan mudah dan abadikan setiap momen serumu. Main, rekam, dan nikmati kembali
                         hasil permainanmu kapan saja.
                     </p>
+
                 </div>
             </div>
             <div class="col-12">

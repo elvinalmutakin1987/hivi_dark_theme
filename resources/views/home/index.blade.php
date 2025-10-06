@@ -1,14 +1,14 @@
 @extends('partials.main')
 
 @section('css')
-@endsection
-
-@section('js')
     <style>
         .fc-black {
             color: black
         }
     </style>
+@endsection
+
+@section('js')
 @endsection
 
 @section('content')

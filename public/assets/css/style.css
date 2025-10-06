@@ -1191,8 +1191,8 @@ a:focus {
 
 .header-search .top-search {
     position: absolute;
-    top: 50px;
-    right: 0;
+    top: 45px;
+    right: -20px;
     min-width: 240px;
     display: none;
     -webkit-transition: all 0.3s ease-in-out;

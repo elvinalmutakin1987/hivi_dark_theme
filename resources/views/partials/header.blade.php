@@ -7,14 +7,15 @@
                         <div id="site-logo">
                             <div id="site-logo-inner">
                                 <a href="{{ route('home') }}" rel="home" class="main-logo">
-                                    <img id="logo_header" src="assets/images/logo/logo-dark.png"
-                                        data-retina="assets/images/logo/logo-dark@2x.png">
+                                    <img id="logo_header" src="{{ asset('assets/images/logo/logo-dark.png') }}"
+                                        data-retina="{{ asset('assets/images/logo/logo-dark@2x.png') }}">
                                 </a>
                             </div>
                         </div><!-- logo -->
                         <div class="mobile-button">
                             <span></span>
                         </div><!-- /.mobile-button -->
+
                         <nav id="main-nav" class="main-nav">
                             <ul id="menu-primary-menu" class="menu">
                                 <li class="menu-item">
@@ -31,24 +32,12 @@
                                 </li>
                             </ul>
                         </nav><!-- /#main-nav -->
-                        <div class="flat-wallet flex">
-                            <div class="" id="wallet-header">
-                                <a href="market-wallet.html" class="tf-button"
-                                    style="background-color: #171717; color: #def246; transition: all 0.3s ease;"
-                                    onmouseover="this.style.backgroundColor='#def246'; this.style.color='#171717';"
-                                    onmouseout="this.style.backgroundColor='#171717'; this.style.color='#def246';">
-                                    <span>Masuk</span>
-                                </a>
-                            </div>
-                            <div class="" id="wallet-header">
-                                <a href="market-wallet.html" class="tf-button"
-                                    style="background-color: #dee8e8; color: #171717; transition: all 0.3s ease;"
-                                    onmouseover="this.style.backgroundColor='#def246'; this.style.color='#171717';"
-                                    onmouseout="this.style.backgroundColor='#dee8e8'; this.style.color='#171717';">
-                                    <span>Daftar</span>
-                                </a>
-                            </div>
-                        </div>
+
+                        @auth
+                            @include('partials.account-web')
+                        @else
+                            @include('partials.btn-login-web')
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -58,8 +47,8 @@
         <div class="overlay-mobile-nav"></div>
         <div class="inner-mobile-nav">
             <a href="index.html" rel="home" class="main-logo">
-                <img id="mobile-logo_header" src="assets/images/logo/logo.png"
-                    data-retina="assets/images/logo/logo-dark@2x.png">
+                <img id="mobile-logo_header" src="{{ asset('assets/images/logo/logo.png') }}"
+                    data-retina="{{ asset('assets/images/logo/logo-dark@2x.png') }}">
             </a>
             <div class="mobile-nav-close">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white"
@@ -82,12 +71,11 @@
                     <li class="menu-item">
                         <a class="item-menu-mobile" href="about-us.html">Video Replay</a>
                     </li>
-                    <li class="menu-item">
-                        <a class="item-menu-mobile" href="about-us.html">Masuk</a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="item-menu-mobile" href="about-us.html">Daftar</a>
-                    </li>
+                    @auth
+                        @include('partials.account-mob')
+                    @else
+                        @include('partials.btn-login-mob')
+                    @endauth
                 </ul>
             </nav>
         </div>

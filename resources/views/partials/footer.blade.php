@@ -7,8 +7,8 @@
                     <div class="widget-logo flex-grow">
                         <div class="logo-footer" id="logo-footer">
                             <a href="index.html">
-                                <img id="logo_footer" src="assets/images/logo/logo-dark.png"
-                                    data-retina="assets/images/logo/logo-dark@2x.png">
+                                <img id="logo_footer" src="{{ asset('assets/images/logo/logo-dark.png') }}"
+                                    data-retina="{{ asset('assets/images/logo/logo-dark@2x.png') }}">
                             </a>
                         </div>
                     </div>

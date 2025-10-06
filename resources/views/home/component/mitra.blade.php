@@ -9,7 +9,7 @@
                         Satu platform untuk jadwal, booking, pembayaran, dan laporan—lebih rapi, tanpa ribet, profit
                         melaju.
                     </p>
-                    <a href="market-wallet.html" class="tf-button h50 w190"
+                    <a href="{{ route('kemitraan') }}" class="tf-button h50 w190"
                         style="background-color: #171717; color: #def246; transition: all 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#def246'; this.style.color='#171717';"
                         onmouseout="this.style.backgroundColor='#171717'; this.style.color='#def246';">

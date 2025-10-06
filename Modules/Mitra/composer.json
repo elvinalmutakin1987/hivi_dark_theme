@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/mitra",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Mitra\\": "",
+            "Modules\\Mitra\\App\\": "app/",
+            "Modules\\Mitra\\Database\\Factories\\": "database/factories/",
+            "Modules\\Mitra\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Mitra\\Tests\\": "tests/"
+        }
+    }
+}
