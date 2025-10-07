@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::get('login/google', [LoginController::class, 'redirectToGoogle'])->name('login.redirectToGoole');
 Route::get('login/google/callback', [LoginController::class, 'handleGoogleCallback'])->name('login.handleGoogleCallBack');
+Route::get('logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/tentang', [TentangController::class, 'index'])->name('tentang');
@@ -33,4 +34,4 @@ Route::get('/kemitraan', [KemitraanController::class, 'index'])->name('kemitraan
 Route::get('/kemitraan/daftar', [KemitraanController::class, 'daftar'])->name('kemitraan.daftar');
 Route::post('/kemitraan/daftar', [KemitraanController::class, 'simpan_daftar'])->name('kemitraan.simpan_pendaftaran');
 
-Route::get('/sewa-lapangan', [SewalapanganController::class, 'index'])->name('sewalapangan');
+Route::get('/sewa-lapangan', [SewalapanganController::class, 'index'])->name('sewa_lapangan');

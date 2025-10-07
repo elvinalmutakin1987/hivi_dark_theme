@@ -16,7 +16,8 @@
                         Lihat selengkapnya <i class="icon-arrow-right2"></i>
                     </a>
                     <div class="image">
-                        <img class="iphone" src="{{ asset('images/court1.jpg') }}" alt="" style="height: 330px">
+                        <img class="iphone" src="{{ asset('images/court1.jpg') }}" alt=""
+                            style="height: 330px;border-radius: 10px;">
                     </div>
                 </div>
             </div>

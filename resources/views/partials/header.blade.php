@@ -7,8 +7,10 @@
                         <div id="site-logo">
                             <div id="site-logo-inner">
                                 <a href="{{ route('home') }}" rel="home" class="main-logo">
-                                    <img id="logo_header" src="{{ asset('assets/images/logo/logo-dark.png') }}"
-                                        data-retina="{{ asset('assets/images/logo/logo-dark@2x.png') }}">
+                                    <img id="logo_header" src="{{ asset('images/hivi-logo.png') }}"
+                                        style="width: 64px; height: 64px"
+                                        data-retina="{{ asset('images/hivi-logo.png') }}">
+
                                 </a>
                             </div>
                         </div><!-- logo -->
@@ -16,22 +18,19 @@
                             <span></span>
                         </div><!-- /.mobile-button -->
 
-                        <nav id="main-nav" class="main-nav">
+                        <nav id="main-nav" class="main-nav" style="left:120px">
                             <ul id="menu-primary-menu" class="menu">
                                 <li class="menu-item">
-                                    <a href="about-us.html">Sewa Lapangan</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="about-us.html">Main Bareng</a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="about-us.html">Market Place</a>
+                                    <a href="{{ route('sewa_lapangan') }}">Sewa Lapangan</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="about-us.html">Video Replay</a>
                                 </li>
+                                <li class="menu-item">
+                                    <a href="{{ route('kemitraan') }}">Kemitraan</a>
+                                </li>
                             </ul>
-                        </nav><!-- /#main-nav -->
+                        </nav>
 
                         @auth
                             @include('partials.account-web')
@@ -45,13 +44,13 @@
     </div>
     <div class="mobile-nav-wrap">
         <div class="overlay-mobile-nav"></div>
-        <div class="inner-mobile-nav">
+        <div class="inner-mobile-nav" style="background-color: #f5f5f7">
             <a href="index.html" rel="home" class="main-logo">
-                <img id="mobile-logo_header" src="{{ asset('assets/images/logo/logo.png') }}"
-                    data-retina="{{ asset('assets/images/logo/logo-dark@2x.png') }}">
+                <img id="logo_header" src="{{ asset('images/hivi-logo.png') }}" style="width: 64px; height: 64px"
+                    data-retina="{{ asset('images/hivi-logo.png') }}">
             </a>
             <div class="mobile-nav-close">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="white"
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="black"
                     x="0px" y="0px" width="20px" height="20px" viewBox="0 0 122.878 122.88"
                     enable-background="new 0 0 122.878 122.88" xml:space="preserve">
                     <g>
@@ -63,16 +62,17 @@
             <nav id="mobile-main-nav" class="mobile-main-nav">
                 <ul id="menu-mobile-menu" class="menu">
                     <li class="menu-item">
-                        <a class="item-menu-mobile" href="about-us.html">Sewa Lapangan</a>
+                        <a class="item-menu-mobile" href="{{ route('sewa_lapangan') }}" style="color:black">Sewa
+                            Lapangan</a>
                     </li>
                     <li class="menu-item">
-                        <a class="item-menu-mobile" href="about-us.html">Main Bareng</a>
+                        <a class="item-menu-mobile" href="about-us.html" style="color:black">Video Replay</a>
                     </li>
                     <li class="menu-item">
-                        <a class="item-menu-mobile" href="about-us.html">Video Replay</a>
+                        <a class="item-menu-mobile" href="{{ route('kemitraan') }}" style="color:black">Kemitraan</a>
                     </li>
                     @auth
-                        @include('partials.account-mob')
+                        {{-- @include('partials.account-mob') --}}
                     @else
                         @include('partials.btn-login-mob')
                     @endauth

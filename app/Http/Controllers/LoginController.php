@@ -42,4 +42,19 @@ class LoginController extends Controller
             return redirect('login')->with('error', 'Login gagal!');
         }
     }
+
+    public function logout(Request $request)
+    {
+        $user = Auth::user();
+        if ($user->provider == 'google') {
+            Socialite::driver('google')->revoke();
+        }
+
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('home');
+    }
 }

@@ -10,7 +10,10 @@
                         Pesan lapangan dengan mudah dan abadikan setiap momen serumu. Main, rekam, dan nikmati kembali
                         hasil permainanmu kapan saja.
                     </p>
-
+                    <div data-wow-delay="0.2s" class="wow fadeInUp flat-button flex justify-center">
+                        <a href="{{ route('sewa_lapangan') }}" class="tf-button style-1 h50 w200 mr-16">Cari lapangan <i
+                                class="icon-arrow-right2"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="col-12">

@@ -6,9 +6,10 @@
                 <div class="footer-content flex flex-grow">
                     <div class="widget-logo flex-grow">
                         <div class="logo-footer" id="logo-footer">
-                            <a href="index.html">
-                                <img id="logo_footer" src="{{ asset('assets/images/logo/logo-dark.png') }}"
-                                    data-retina="{{ asset('assets/images/logo/logo-dark@2x.png') }}">
+                            <a href="{{ route('home') }}" rel="home" class="main-logo">
+                                <img id="logo_header" src="{{ asset('images/hivi-logo.png') }}"
+                                    style="width: 64px; height: 64px" data-retina="{{ asset('images/hivi-logo.png') }}">
+
                             </a>
                         </div>
                     </div>

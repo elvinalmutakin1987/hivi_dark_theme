@@ -23,5 +23,4 @@
 
 
     @yield('css')
-
 </head>
