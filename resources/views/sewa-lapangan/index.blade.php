@@ -178,6 +178,8 @@
 
 @section('content')
     @include('sewa-lapangan.component.filter')
-    @include('sewa-lapangan.component.list_lapangan')
+    @include('sewa-lapangan.component.lapangan', [
+        'venue' => $venue,
+    ])
     @include('sewa-lapangan.component.faq')
 @endsection

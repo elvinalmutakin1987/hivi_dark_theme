@@ -42,4 +42,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    protected static function booted()
+    {
+        parent::booted();
+
+        static::created(function ($user) {
+            $user->member()->create([
+                'user_id' => $user->id,
+            ]);
+        });
+    }
+
+    public function member()
+    {
+        return $this->hasOne(Member::class);
+    }
 }
