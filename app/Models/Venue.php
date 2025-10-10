@@ -9,4 +9,9 @@ class Venue extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function court()
+    {
+        return $this->hasMany(Court::class);
+    }
 }

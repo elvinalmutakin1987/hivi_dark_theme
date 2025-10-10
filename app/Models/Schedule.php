@@ -9,4 +9,9 @@ class Schedule extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function court()
+    {
+        return $this->belongsTo(Court::class);
+    }
 }
